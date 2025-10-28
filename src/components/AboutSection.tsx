@@ -1,15 +1,8 @@
 import React from 'react';
-import { Building2, Users, TrendingUp, Award } from 'lucide-react';
 import { AdvantageCard } from './AdvantageCard';
 import { advantages } from '../src/data/advantages';
 
 export function AboutSection() {
-  const industries = [
-    { icon: Building2, name: 'Финансы' },
-    { icon: Users, name: 'Ритейл' },
-    { icon: TrendingUp, name: 'Производство' },
-    { icon: Award, name: 'Госсектор' },
-  ];
 
   return (
     <section id="about" className="py-20 md:py-32 bg-background">
@@ -24,7 +17,7 @@ export function AboutSection() {
           </h2>
           <p className="text-lg text-foreground/70">
             Мы — технологический партнер для компаний, стремящихся к цифровой трансформации. 
-            Предоставляем полный спектр ИТ-услуг: от аудита и консалтинга до разработки и круглосуточной поддержки.
+            Предоставляем полный спектр ИТ-услуг: от аудита и консалтинга до разработки ПО и круглосуточной поддержки.
           </p>
         </div>
 
@@ -38,33 +31,6 @@ export function AboutSection() {
               icon={advantage.icon}
             />
           ))}
-        </div>
-
-        {/* Industry Expertise */}
-        <div className="bg-muted rounded-2xl p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
-            Отраслевая экспертиза
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => {
-              const Icon = industry.icon;
-              return (
-                <div
-                  key={index}
-                  className="flex flex-col items-center text-center space-y-3 p-4 rounded-lg hover:bg-background transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-medium">{industry.name}</span>
-                </div>
-              );
-            })}
-          </div>
-          <p className="text-center text-foreground/70 mt-8 max-w-2xl mx-auto">
-            Наши инженеры имеют успешный опыт реализации проектов в различных отраслях, 
-            понимают специфику бизнеса и готовы предложить оптимальные решения.
-          </p>
         </div>
       </div>
     </section>

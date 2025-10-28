@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,13 +24,6 @@ export function Footer() {
     ],
   };
 
-  const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Github, href: '#', label: 'GitHub' },
-  ];
-
   return (
     <footer className="bg-muted/50 border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -38,9 +31,11 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] flex items-center justify-center shadow-lg">
-                <span className="text-white text-xl font-bold">F</span>
-              </div>
+              <img
+                src="src/assets/logo.png"
+                alt="Логотип FUTURET"
+                className="w-10 h-10"
+              />
               <span className="text-xl font-bold bg-gradient-to-r from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] bg-clip-text text-transparent">
                 FUTURET
               </span>
@@ -48,21 +43,6 @@ export function Footer() {
             <p className="text-foreground/70 text-sm">
               Технологический партнер для цифровой трансформации вашего бизнеса
             </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="w-9 h-9 rounded-lg bg-background hover:bg-primary transition-colors flex items-center justify-center group"
-                  >
-                    <Icon className="w-4 h-4 text-foreground/70 group-hover:text-white transition-colors" />
-                  </a>
-                );
-              })}
-            </div>
           </div>
 
           {/* Company Links */}
@@ -105,20 +85,26 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-2 text-sm">
                 <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@futuret.ru" className="text-foreground/70 hover:text-primary transition-colors">
+                <a
+                  href="mailto:info@futuret.ru"
+                  className="text-foreground/70 hover:text-primary transition-colors"
+                >
                   info@futuret.ru
                 </a>
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <Phone className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <a href="tel:+74951234567" className="text-foreground/70 hover:text-primary transition-colors">
-                  +7 (495) 123-45-67
+                <a
+                  href="tel:+74951234567"
+                  className="text-foreground/70 hover:text-primary transition-colors"
+                >
+                  +7 (495) 000-00-00
                 </a>
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-foreground/70">
-                  г. Москва, ул. Тверская, д. 1
+                  г. Москва
                 </span>
               </li>
             </ul>

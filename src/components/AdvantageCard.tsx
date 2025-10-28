@@ -2,12 +2,13 @@ import React from 'react';
 import * as LucideIcons from 'lucide-react';
 
 interface AdvantageCardProps {
+  key: string;
   title: string;
   description: string;
   icon: string;
 }
 
-export function AdvantageCard({ title, description, icon }: AdvantageCardProps) {
+export function AdvantageCard({ key, title, description, icon }: AdvantageCardProps) {
   const Icon = (LucideIcons as any)[icon] || LucideIcons.Star;
 
   return (

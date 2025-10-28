@@ -13,7 +13,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted">
       <Hero3D />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32 md:py-40">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Badge */}
@@ -35,8 +35,8 @@ export function HeroSection() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto">
-            Комплексные ИТ-услуги и решения для компаний любого масштаба. 
-            От аудита инфраструктуры до круглосуточной поддержки.
+            Комплексные ИТ-услуги и решения для компаний любого масштаба. От
+            аудита инфраструктуры до разработки ПО и круглосуточной поддержки.
           </p>
 
           {/* CTA Buttons */}
@@ -52,7 +52,9 @@ export function HeroSection() {
               href="#about"
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .querySelector("#about")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="px-8 py-4 bg-muted hover:bg-accent text-foreground rounded-lg transition-colors duration-300"
             >
@@ -60,7 +62,7 @@ export function HeroSection() {
             </a>
           </div>
 
-          {/* Stats */}
+          {/* Stats
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 max-w-4xl mx-auto">
             {[
               { value: '500+', label: 'Проектов' },
@@ -75,7 +77,7 @@ export function HeroSection() {
                 <div className="text-sm text-foreground/60 mt-1">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

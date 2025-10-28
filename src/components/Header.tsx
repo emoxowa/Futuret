@@ -1,13 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { ThemeToggle, Theme } from './ThemeToggle';
+import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
-interface HeaderProps {
-  theme: Theme;
-  onThemeToggle: () => void;
-}
-
-export function Header({ theme, onThemeToggle }: HeaderProps) {
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -16,23 +11,26 @@ export function Header({ theme, onThemeToggle }: HeaderProps) {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { href: '#about', label: 'О компании' },
-    { href: '#services', label: 'Услуги' },
-    { href: '#products', label: 'Продукты' },
-    { href: '#partners', label: 'Партнеры' },
-    { href: '#contact', label: 'Контакты' },
+    { href: "#about", label: "О компании" },
+    { href: "#services", label: "Услуги" },
+    { href: "#products", label: "Продукты" },
+    { href: "#partners", label: "Партнеры" },
+    { href: "#contact", label: "Контакты" },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
     }
   };
@@ -41,8 +39,8 @@ export function Header({ theme, onThemeToggle }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-md'
-          : 'bg-transparent'
+          ? "bg-background/95 backdrop-blur-md shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,9 +48,11 @@ export function Header({ theme, onThemeToggle }: HeaderProps) {
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2 group">
             <div className="relative">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-                <span className="text-white text-xl font-bold">F</span>
-              </div>
+              <img
+                src="src/assets/logo.png"
+                alt="Логотип FUTURET"
+                className="w-10 h-10"
+              />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] bg-clip-text text-transparent">
               FUTURET
@@ -76,18 +76,17 @@ export function Header({ theme, onThemeToggle }: HeaderProps) {
 
           {/* Theme Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <ThemeToggle theme={theme} onToggle={onThemeToggle} />
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
-              aria-label="Меню"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
+            <ul className="space-y-3">
+              <li className="flex items-start space-x-2 text-sm">
+                <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <a
+                  href="mailto:info@futuret.ru"
+                  className="text-foreground/70 hover:text-primary transition-colors"
+                >
+                  info@futuret.ru
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

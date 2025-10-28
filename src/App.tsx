@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Toaster } from 'sonner@2.0.3';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
@@ -35,23 +34,9 @@ const setThemeClass = (theme: Theme): void => {
 };
 
 export default function App() {
-  const [theme, setTheme] = useState<Theme>('light');
-
-  useEffect(() => {
-    const initialTheme = getInitialTheme();
-    setTheme(initialTheme);
-    setThemeClass(initialTheme);
-  }, []);
-
-  const handleThemeToggle = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    setThemeClass(newTheme);
-  };
-
   return (
     <>
-      <Header theme={theme} onThemeToggle={handleThemeToggle} />
+      <Header />
       <main>
         <HeroSection />
         <AboutSection />
@@ -62,11 +47,6 @@ export default function App() {
       </main>
       <Footer />
       <BackToTop />
-      <Toaster 
-        position="top-right" 
-        theme={theme}
-        richColors
-      />
     </>
   );
 }

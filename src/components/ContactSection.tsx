@@ -7,22 +7,17 @@ export function ContactSection() {
     {
       icon: MapPin,
       title: 'Адрес',
-      content: 'г. Москва, ул. Тверская, д. 1',
+      content: 'г. Москва',
     },
     {
       icon: Phone,
       title: 'Телефон',
-      content: '+7 (495) 123-45-67',
+      content: '+7 (495) 000-00-00',
     },
     {
       icon: Mail,
       title: 'Email',
       content: 'info@futuret.ru',
-    },
-    {
-      icon: Clock,
-      title: 'Режим работы',
-      content: 'Пн-Пт: 9:00-18:00',
     },
   ];
 
