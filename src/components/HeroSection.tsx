@@ -43,7 +43,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <button
               onClick={handleScrollToContact}
-              className="group px-8 py-4 bg-gradient-to-r from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] text-white rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2"
+              className="cursor-pointer group px-8 py-4 bg-gradient-to-r from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] text-white rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2"
             >
               <span>Начать проект</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

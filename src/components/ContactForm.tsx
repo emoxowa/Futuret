@@ -50,8 +50,8 @@ export function ContactForm() {
             id="name"
             type="text"
             placeholder="Ваше имя"
-            {...register('name', { required: 'Введите имя' })}
-            className={errors.name ? 'border-destructive' : ''}
+            {...register("name", { required: "Введите имя" })}
+            className={errors.name ? "border-destructive" : ""}
           />
           {errors.name && (
             <p className="text-sm text-destructive">{errors.name.message}</p>
@@ -65,14 +65,14 @@ export function ContactForm() {
             id="email"
             type="email"
             placeholder="email@example.com"
-            {...register('email', {
-              required: 'Введите email',
+            {...register("email", {
+              required: "Введите email",
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: 'Некорректный email',
+                message: "Некорректный email",
               },
             })}
-            className={errors.email ? 'border-destructive' : ''}
+            className={errors.email ? "border-destructive" : ""}
           />
           {errors.email && (
             <p className="text-sm text-destructive">{errors.email.message}</p>
@@ -86,14 +86,14 @@ export function ContactForm() {
             id="phone"
             type="tel"
             placeholder="+7 (___) ___-__-__"
-            {...register('phone', {
-              required: 'Введите телефон',
+            {...register("phone", {
+              required: "Введите телефон",
               pattern: {
                 value: /^[\d\s+()-]+$/,
-                message: 'Некорректный формат',
+                message: "Некорректный формат",
               },
             })}
-            className={errors.phone ? 'border-destructive' : ''}
+            className={errors.phone ? "border-destructive" : ""}
           />
           {errors.phone && (
             <p className="text-sm text-destructive">{errors.phone.message}</p>
@@ -107,7 +107,7 @@ export function ContactForm() {
             id="company"
             type="text"
             placeholder="Название компании"
-            {...register('company')}
+            {...register("company")}
           />
         </div>
       </div>
@@ -119,8 +119,8 @@ export function ContactForm() {
           id="message"
           placeholder="Опишите ваш проект или задачу..."
           rows={5}
-          {...register('message', { required: 'Введите сообщение' })}
-          className={errors.message ? 'border-destructive' : ''}
+          {...register("message", { required: "Введите сообщение" })}
+          className={errors.message ? "border-destructive" : ""}
         />
         {errors.message && (
           <p className="text-sm text-destructive">{errors.message.message}</p>
@@ -131,7 +131,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] text-white rounded-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+        className="cursor-pointer w-full md:w-auto px-8 py-3 bg-gradient-to-r from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] text-white rounded-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
       >
         {isSubmitting ? (
           <>
@@ -147,7 +147,8 @@ export function ContactForm() {
       </button>
 
       <p className="text-sm text-foreground/60">
-        * Обязательные поля. Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.
+        * Обязательные поля. Нажимая кнопку, вы соглашаетесь с политикой
+        обработки персональных данных.
       </p>
     </form>
   );

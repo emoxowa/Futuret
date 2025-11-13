@@ -31,7 +31,7 @@ export function BackToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center hover:scale-110"
+      className="cursor-pointer fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center hover:scale-110"
       aria-label="Вернуться наверх"
     >
       <ArrowUp className="w-6 h-6" />

@@ -16,7 +16,7 @@ export function ProductCard({ title, description, icon, details }: ProductCardPr
 
   return (
     <>
-      <div 
+      <div
         className="group h-full p-6 rounded-xl bg-card border border-border hover:border-secondary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
         onClick={() => setIsOpen(true)}
       >
@@ -26,7 +26,7 @@ export function ProductCard({ title, description, icon, details }: ProductCardPr
           </div>
           <h3 className="text-xl font-semibold mb-3">{title}</h3>
           <p className="text-foreground/70 mb-4 flex-grow">{description}</p>
-          <button className="flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
+          <button className="cursor-pointer flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors">
             <span>Узнать больше</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>

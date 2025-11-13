@@ -6,21 +6,21 @@ export function Footer() {
 
   const footerLinks = {
     company: [
-      { label: 'О компании', href: '#about' },
-      { label: 'Услуги', href: '#services' },
-      { label: 'Продукты', href: '#products' },
-      { label: 'Партнеры', href: '#partners' },
+      { label: "О компании", href: "#about" },
+      { label: "Услуги", href: "#services" },
+      { label: "Продукты", href: "#products" },
+      { label: "Партнеры", href: "#partners" },
     ],
     services: [
-      { label: 'Аудит и консалтинг', href: '#services' },
-      { label: 'Разработка ПО', href: '#services' },
-      { label: 'Поддержка 24×7', href: '#services' },
-      { label: 'Аутсорс ИТ', href: '#services' },
+      { label: "Разработка ПО", href: "#services" },
+      { label: "Аудит и консалтинг", href: "#services" },
+      { label: "Поддержка 24×7", href: "#services" },
+      { label: "Аутсорс ИТ", href: "#services" },
     ],
     legal: [
-      { label: 'Политика конфиденциальности', href: '#' },
-      { label: 'Условия использования', href: '#' },
-      { label: 'Реквизиты', href: '#' },
+      { label: "Политика конфиденциальности", href: "#" },
+      { label: "Условия использования", href: "#" },
+      { label: "Реквизиты", href: "#" },
     ],
   };
 

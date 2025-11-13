@@ -16,7 +16,8 @@ export function ServiceCard({ title, description, icon, details }: ServiceCardPr
 
   return (
     <>
-      <div className="group h-full p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+      <div
+        className="group h-full p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
         onClick={() => setIsOpen(true)}
       >
         <div className="flex flex-col h-full">
@@ -25,7 +26,7 @@ export function ServiceCard({ title, description, icon, details }: ServiceCardPr
           </div>
           <h3 className="text-xl font-semibold mb-3">{title}</h3>
           <p className="text-foreground/70 mb-4 flex-grow">{description}</p>
-          <button className="flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
+          <button className="cursor-pointer flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors">
             <span>Подробнее</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
