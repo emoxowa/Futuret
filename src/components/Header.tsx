@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Mail, Phone } from "lucide-react";
+import logo from "../assets/logo.png";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,11 +49,7 @@ export function Header() {
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2 group">
             <div className="relative">
-              <img
-                src="src/assets/logo.png"
-                alt="Логотип FUTURET"
-                className="w-10 h-10"
-              />
+              <img src={logo} alt="Логотип FUTURET" className="w-10 h-10" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] bg-clip-text text-transparent">
               FUTURET

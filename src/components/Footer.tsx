@@ -1,5 +1,6 @@
-import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import React from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import logo from "../assets/logo.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -31,11 +32,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img
-                src="src/assets/logo.png"
-                alt="Логотип FUTURET"
-                className="w-10 h-10"
-              />
+              <img src={logo} alt="Логотип FUTURET" className="w-10 h-10" />
               <span className="text-xl font-bold bg-gradient-to-r from-[var(--color-brand-cyan)] to-[var(--color-brand-teal)] bg-clip-text text-transparent">
                 FUTURET
               </span>
@@ -103,9 +100,7 @@ export function Footer() {
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-foreground/70">
-                  г. Москва
-                </span>
+                <span className="text-foreground/70">г. Москва</span>
               </li>
             </ul>
           </div>
